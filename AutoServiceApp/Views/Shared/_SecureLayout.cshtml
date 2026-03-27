@@ -1,0 +1,89 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Dashboard</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        header, footer {
+            padding-left: 300px;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔥 SIDE NAV -->
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li>
+            <div class="user-view">
+                <div class="background blue-grey"></div>
+                <a href="#"><img class="circle" src="https://i.pravatar.cc/100"></a>
+                <a href="#"><span class="white-text name">Admin</span></a>
+                <a href="#"><span class="white-text email">admin@gmail.com</span></a>
+            </div>
+        </li>
+
+        <li><a href="#"><i class="material-icons">dashboard</i>Dashboard</a></li>
+
+        <li>
+            <a class="collapsible-header">
+                <i class="material-icons">supervisor_account</i>User Management
+            </a>
+        </li>
+
+        <li><a href="#"><i class="material-icons">build</i>Service Requests</a></li>
+        <li><a href="#"><i class="material-icons">notifications</i>Notifications</a></li>
+        <li><a href="#"><i class="material-icons">local_offer</i>Promotions</a></li>
+    </ul>
+
+    <!-- 🔥 MAIN CONTENT -->
+    <main>
+
+        <!-- HEADER -->
+        <nav class="blue-grey lighten-1">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Automobile Service Center</a>
+            </div>
+        </nav>
+
+        <!-- CONTENT -->
+        <div class="container">
+            @RenderBody()
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="page-footer blue-grey lighten-1">
+            <div class="container center">
+                © 2026 Auto Service Center
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
